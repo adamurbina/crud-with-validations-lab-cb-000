@@ -7,6 +7,10 @@ class SongsController < ApplicationController
   def new
   end
 
+  def show
+    @song = Song.find(params[:id])
+  end
+
   def create
     @song = Song.new(song_params)
     if @song.valid?
@@ -17,9 +21,7 @@ class SongsController < ApplicationController
     end
   end
 
-  def show
-    @song = Song.find(params[:id])
-  end
+  
 
   def edit
     @song = Song.find(params[:id])
@@ -37,7 +39,7 @@ class SongsController < ApplicationController
   def detroy
   end
 
-  
+
 
   def song_params
     params.permit(:title, :released, :release_year, :artist_name, :genre)
