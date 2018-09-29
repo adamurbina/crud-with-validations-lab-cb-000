@@ -4,11 +4,15 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
+  def show
+    @song = Song.find(params[:id])
+  end
+
   def new
     @song = Song.new
   end
 
-  def show
+  def edit
     @song = Song.find(params[:id])
   end
 
@@ -20,10 +24,6 @@ class SongsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
-    @song = Song.find(params[:id])
   end
 
   def update
