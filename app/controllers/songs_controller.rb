@@ -16,13 +16,18 @@ class SongsController < ApplicationController
   end
 
   def update
+    @song = Song.find(params[:id])
+    if @song.update(song_params)
+      redirect_to song_path(@song)
+    else
+      render :edit
+    end
   end
 
   def detroy
   end
 
   def create
-    binding.pry
     @song = Song.new(song_params)
     if @song.valid?
       @song.save
