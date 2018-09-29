@@ -8,6 +8,7 @@ class SongsController < ApplicationController
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def edit
@@ -21,5 +22,5 @@ class SongsController < ApplicationController
 
   def create
   end
-  
+
 end
