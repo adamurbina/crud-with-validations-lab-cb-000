@@ -7,7 +7,7 @@ class Song < ActiveRecord::Base
   def same_song
     if song = Song.find_by(title: title)
       if song.release_year = release_year
-        errors.add(:title, "same song")
+        errors.add(:title, "Song already exists.")
       end
     end
   end
