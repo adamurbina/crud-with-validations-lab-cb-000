@@ -21,8 +21,6 @@ class SongsController < ApplicationController
     end
   end
 
-
-
   def edit
     @song = Song.find(params[:id])
   end
@@ -41,8 +39,6 @@ class SongsController < ApplicationController
     @song.destroy
     redirect_to songs_path
   end
-
-
 
   def song_params
     params.require(:song).permit(:title, :released, :release_year, :artist_name, :genre)
