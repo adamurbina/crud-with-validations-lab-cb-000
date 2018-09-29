@@ -36,7 +36,7 @@ class SongsController < ApplicationController
     end
   end
 
-  def detroy
+  def destroy
   end
 
 
