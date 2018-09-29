@@ -10,10 +10,10 @@
 <h1>Songs</h1>
  <table>
    <tbody>
- <% @songs.each do |s| %>
+ <% @songs.each do |song| %>
  <tr>
-   <td> <%= link_to s.title, song_path(s) %> </td>
+   <td> <%= link_to s.title, song_path(song) %> </td>
  </tr>
  <% end %>
  </tbody>
- </table> 
+ </table>
