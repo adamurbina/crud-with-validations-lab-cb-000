@@ -4,10 +4,12 @@
     <th>Song</th>
     <th>Artist</th>
   </thead>
+</tbody>
 <%= @song.each do |song| %>
   <tr>
     <td><%= song.title %></td>
     <td><%= song.artist %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
