@@ -1,5 +1,5 @@
 
-<table>
+<!-- <table>
   <thead>
     <th>Song</th>
     <th>Artist</th>
@@ -12,4 +12,8 @@
     </tr>
   <% end %>
 </tbody>
-</table>
+</table> -->
+
+<% @songs.each do |song| %>
+<%= song.title %>
+<% end %>
